@@ -12,6 +12,6 @@ For short-form musings on software development (and a lot of other things) you c
 
 Most of my work is closed-source, so I don't maintain much of a GitHub presence, but you can [find it here]. 
 
-[find me on Twitter]:[https://twitter.com/LilaHickey]
-[find it here]:[https://github.com/LilaHickey] 
+[find me on Twitter]:https://twitter.com/LilaHickey
+[find it here]: https://github.com/LilaHickey 
 
