@@ -8,7 +8,7 @@ _Oh, just optimize it! What can it hurt?_
 
 Our Eyes.
 
-Performance-optimizing usually means increased complexity and reduced readability, but we rarely explicitly discuss these trade-off. Just as we ask if code is optimized, we should ask if it is simple and easy to read:
+We rarely talk explicit about the trade-off between performance optimization, readability, and simplicity. Just as we ask if code is optimized, we should ask if it is simple and easy to read:
 
 1.  how many distinct operations must the reader mentally perform to understand the code?
 2.  does its execution path match the way we would describe the workflow to a human?
@@ -64,7 +64,7 @@ I was perplexed to receive a message thanking me for the branch, and noting that
 > 
 > “Of course,” he agreed. “But if the path already exists, we can avoid building it!”
 
-Now I understood our miscommunication: he was prioritizing performance, and I (having determined there was no relevant performance difference[^1]) was prioritizing simplicity of code.
+Now I understood our miscommunication: he was prioritizing performance, and I (having determined there was no relevant performance difference[^1] ) was prioritizing simplicity of code.
 
 ## Readability & Simplicity
 
@@ -111,11 +111,17 @@ Just by existing the conditional in option #2 adds complexity, which is in turn 
 *   Worse: _really_ bad logic could cause an explicit javascript error (e.g. referencing an undefined nested slice in the response object). In the absence of robust error-handling, we may render _the entire page_ unusable.
 *   A poorly-written conditional (e.g. using ‘hasOwnProperty’) could lead to [overall slower execution](https://jsperf.com/easy-to-read-does-it), chewing through any benefit of the optimization - and then some.
 
-## In Conclusion
+## In Conclusion...
 
 Readable code is maintainable code; simple code is robust code. Performance-optimized code may be neither, and that's OK.  But software development is a balancing act, and as with any balancing act, we'll do our best work with our eyes wide open. 
 
+---
 
-1.  The internet is already full-to-bursting with information about (premature) optimization, but the crux of why it was not useful here lies in the issue of proportion: the primary task (of generating the logfile) might take several minutes; setting the download link at the UI level is an operation that takes microseconds, and is simply not worth optimizing, by comparison.
+#### Footnotes
+
+[^1]: The internet is already full-to-bursting with information about (premature) optimization, but the crux of why it was not useful here lies in the issue of proportion: the primary task (of generating the logfile) might take several minutes; setting the download link at the UI level is an operation that takes microseconds, and is simply not worth optimizing, by comparison.
 
     It is also sometimes useful to consider performance optimization from a horizontally-sliced perspective (e.g. how many times is *this UI instance* going to perform this operation, potentially concurrently?). However in this scenario there is a 1:1 relationship between UIs & APIs, and the API generates an exclusive lock while performing the operation, i.e. the UI can never have more than a single such operation in flight, and repeated calls to the operation are (effectively) rate-limited by the server-side time required to perform it.
+
+
+    
