@@ -105,7 +105,7 @@ So why is option #1 better?
 
 ### Simplicity
 
-Just by existing the conditional in option #2 adds complexity, which is in turn increases exposure to errors and performance problems.
+Just by existing, the conditional in option #2 adds complexity, which in turn increases exposure to errors and performance problems.
 
 *   What if the conditional logic is wrong, and references the ‘filepath’ attribute when it isn’t available? Now we have failed at our fundamental task: to protect the user from a broken download link.
 *   Worse: _really_ bad logic could cause an explicit javascript error (e.g. referencing an undefined nested slice in the response object). In the absence of robust error-handling, we may render _the entire page_ unusable.
