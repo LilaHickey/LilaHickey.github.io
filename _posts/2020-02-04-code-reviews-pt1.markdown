@@ -13,7 +13,7 @@ Code reviews are hard.  You have limited time to match the author's knowledge of
 So it's no surprise how often we see one of these code review anti-patterns:
 
 1. [Can't Win, Won't Try](#cant-win-wont-try)
-2. Everything is Awful (When You're Part of a Team)
+2. [Everything is Awful (When You're Part of a Team)]({% post_url 2020-02-11-code-reviews-pt2 %})
 3. The Captain Jack Sparrow
 
 This post is focused on spotting these patterns in ourselves, and doing something better, instead!
@@ -58,6 +58,8 @@ Ok, so: you're the right person, you have the time, and the PR is as good as it 
 
 Hopefully some or all of these steps will come in handy the next time an overwhelming PR crosses your desk. 
 
+
+---
 
 #### Footnotes
 [^1]: Keep in mind that how to bound a pull request is always a judgement call, and some diffs look deceptively large.  It might take a few minutes to assess/answer that question.
