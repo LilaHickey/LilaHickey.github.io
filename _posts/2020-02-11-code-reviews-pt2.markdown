@@ -9,7 +9,7 @@ date: 2020-02-11 06:00:00 -0700
 
 1. [Can't Win, And So I Will Not Try]({% post_url 2020-02-04-code-reviews-pt1 %})
 2. [Everything is Awful (When You're Part of a Team)](#everything-is-awful-when-youre-part-of-a-team)
-3. The Captain Jack Sparrow
+3. [The Captain Jack Sparrow]({% post_url 2020-02-27-code-reviews-pt3 %})
 
 ## Everything is Awful (When You're Part of a Team)
 

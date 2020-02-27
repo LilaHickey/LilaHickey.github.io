@@ -101,7 +101,7 @@ So why is option #1 better?
     1.  evaluate the conditional to understand _how_ execution will fork.
     2.  parse the code inside each conditional to understand _what_ will be executed.
     3.  remember which code will be executed in which condition.
-*   In addition, the _very existence of an execution fork_ in option #2 creates the impression that we are doing two explicitly different things (either from a programmatic perspective, from a user experience perspective, or both). In reality, the user experience and the end state of the UI will be will be identical. This is arguably a violation of [the Principle of Least Astonishment](https://en.wikipedia.org/wiki/Principle_of_least_astonishment).
+*   In addition, the _very existence of an execution fork_ in option #2 creates the impression that we are doing two explicitly different things (either from a programmatic perspective, from a user experience perspective, or both). In reality, the user experience and the end state of the UI will be will be identical. This is arguably a violation of [the Principle of Least Astonishment](https://en.wikipedia.org/wiki/Principle_of_least_astonishment){:target="_blank"}.
 
 ### Simplicity
 
@@ -109,7 +109,7 @@ Just by existing, the conditional in option #2 adds complexity, which in turn in
 
 *   What if the conditional logic is wrong, and references the ‘filepath’ attribute when it isn’t available? Now we have failed at our fundamental task: to protect the user from a broken download link.
 *   Worse: _really_ bad logic could cause an explicit javascript error (e.g. referencing an undefined nested slice in the response object). In the absence of robust error-handling, we may render _the entire page_ unusable.
-*   A poorly-written conditional (e.g. using ‘hasOwnProperty’) could lead to [overall slower execution](https://jsperf.com/easy-to-read-does-it), chewing through any benefit of the optimization - and then some.
+*   A poorly-written conditional (e.g. using ‘hasOwnProperty’) could lead to [overall slower execution](https://jsperf.com/easy-to-read-does-it){:target="_blank"}, chewing through any benefit of the optimization - and then some.
 
 ## In Conclusion...
 
